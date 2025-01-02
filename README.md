@@ -79,7 +79,6 @@ Un fichier csv vide pour tester
 4. Quitter
 ```
 ### Résultat après fusion et génération de rapport
-- Commande : 
 - Contenu de inventory_report.csv :
 ```text 
 category,total_quantity,total_value
