@@ -1,0 +1,15 @@
+product_name,category,price,quantity,total_quantity,total_value
+Smartphone,Electronics,299.99,50.0,,
+Laptop,Electronics,899.99,30.0,,
+Headphones,Electronics,79.99,100.0,,
+Keyboard,Accessories,49.99,150.0,,
+Mouse,Accessories,29.99,200.0,,
+Desk Lamp,Furniture,39.99,80.0,,
+Office Chair,Furniture,129.99,45.0,,
+Wrench,Tools,19.99,70.0,,
+Hammer,Tools,15.99,60.0,,
+Drill,Tools,149.99,25.0,,
+,Accessories,,,350.0,13496.5
+,Electronics,,,180.0,49998.2
+,Furniture,,,125.0,9048.75
+,Tools,,,155.0,6108.45
