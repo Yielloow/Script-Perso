@@ -2,10 +2,10 @@ import unittest
 import os
 import sys
 import pandas as pd
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from search import Search
 
 # Ajout du répertoire parent pour accéder à search.py
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 class TestSearch(unittest.TestCase):
@@ -48,7 +48,7 @@ class TestSearch(unittest.TestCase):
         category = "Electronics"
         results = self.search.search_by_category(category)
         # Trois résultats dans la catégorie 'Electronics'
-        expected_result = 7
+        expected_result = 3
         self.assertEqual(len(results), expected_result,
                          f"La recherche par catégorie '{category}' "
                          f"doit retourner {expected_result} résultats.")
@@ -65,7 +65,7 @@ class TestSearch(unittest.TestCase):
         max_price = 100
         results = self.search.search_by_price(min_price, max_price)
         # Attendu : 3 produits dans cette gamme de prix
-        expected_result = 6
+        expected_result = 3
         self.assertEqual(len(results), expected_result,
                          f"La recherche par prix entre {min_price} et "
                          f"{max_price} doit retourner {expected_result} résultats.")

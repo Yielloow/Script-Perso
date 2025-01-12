@@ -1,7 +1,9 @@
 import unittest
 import os
+import sys
 import pandas as pd
 from unittest.mock import patch
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from report import Report
 
 

@@ -1,5 +1,7 @@
 import unittest
 import os
+
+
 import sys
 
 # Ajout du répertoire parent pour accéder à inventory_manager.py
@@ -12,9 +14,9 @@ class TestInventoryManager(unittest.TestCase):
         """Configuration des fichiers nécessaires aux tests."""
         self.manager = InventoryManager()
         # Utiliser les fichiers existants
-        self.test_file_1 = "empty.csv"
-        self.test_file_2 = "inventory.csv"
-        self.test_file_3 = "invalid_structure.csv"
+        self.test_file_1 = os.path.join(os.path.dirname(__file__), "empty.csv")
+        self.test_file_2 = os.path.join(os.path.dirname(__file__), "inventory.csv")
+        self.test_file_3 = os.path.join(os.path.dirname(__file__), "invalid_structure.csv")
 
         # S'assurer que les fichiers existent
         if not os.path.exists(self.test_file_1):
@@ -71,6 +73,7 @@ class TestInventoryManager(unittest.TestCase):
         self.manager.get_files = lambda: [self.test_file_3]
         self.manager.consolidate_files()
         self.assertTrue(self.manager.inventory.empty, "Un fichier avec une colonne manquante devrait être ignoré.")
+    
 
 if __name__ == "__main__":
     unittest.main()
